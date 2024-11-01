@@ -1,0 +1,24 @@
+<!-- fragments/footer.html -->
+<footer th:fragment="footer" class="footer-gradient text-white py-4" xmlns:th="http://www.thymeleaf.org">
+    <style>
+        .footer-gradient {
+            background: linear-gradient(135deg, #FF69B4, #800080, #4169E1);
+        }
+        .footer-links a {
+            color: #FF69B4;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: #4169E1;
+        }
+    </style>
+    <div class="container text-center">
+        <p>&copy; 2024 LooksTrends. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
