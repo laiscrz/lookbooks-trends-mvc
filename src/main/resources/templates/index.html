@@ -20,7 +20,16 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
         .card-img-top {
             height: 250px;
             object-fit: contain;
@@ -54,7 +63,7 @@
 <div class="container my-5">
     <h2 class="section-title text-center mb-4">Vitrine de Looks</h2>
     <div class="row">
-        <div class="col-md-3">
+        <div class="text-center col-md-3">
             <div class="card">
                 <img src="https://quadrofeminino.com/wp-content/uploads/2019/09/vestido-casual-poas-renata-freire-768x959.jpg" class="card-img-top" alt="Look 1">
                 <div class="card-body">
@@ -64,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="text-center col-md-3">
             <div class="card">
                 <img src="https://www.somosmamas.com.ar/wp-content/uploads/2019/04/FOTO-17-1.jpg" class="card-img-top" alt="Look 2">
                 <div class="card-body">
@@ -74,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="text-center col-md-3">
             <div class="card">
                 <img src="https://guitamoda.com/wp-content/uploads/2021/01/erikacarvalhocav-look-esportivo-blazer.jpg" class="card-img-top" alt="Look 3">
                 <div class="card-body">
@@ -84,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="text-center col-md-3">
             <div class="card">
                 <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2018/11/74.jpg" class="card-img-top" alt="Look 4">
                 <div class="card-body">
