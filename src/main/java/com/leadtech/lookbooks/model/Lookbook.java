@@ -42,4 +42,16 @@ public class Lookbook {
 
     @Enumerated(EnumType.STRING)
     private TrendType tendencia;
+
+    @Override
+    public String toString() {
+        return "Lookbook{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", dataCriacao=" + dataCriacao +
+                ", estilo=" + estilo +
+                ", tendencia=" + tendencia +
+                '}';
+    }
+
 }
