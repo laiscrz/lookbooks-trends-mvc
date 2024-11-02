@@ -8,10 +8,7 @@ import com.leadtech.lookbooks.model.enums.SizeType;
 import com.leadtech.lookbooks.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -39,6 +36,33 @@ public class ProductController {
         return modelAndView;
     }
 
+    @GetMapping("/new")
+    public ModelAndView showCreateProductForm() {
+        ModelAndView modelAndView = new ModelAndView("product/form");
+        modelAndView.addObject("product", new Product());
+        return modelAndView;
+    }
+
+    @PostMapping
+    public String saveProduct(@ModelAttribute Product product) {
+        productService.saveProduct(product);
+        return "redirect:/products";
+    }
+
+    @GetMapping("/edit/{id}")
+    public ModelAndView showEditProductForm(@PathVariable Long id) {
+        Product product = productService.findByIdProduct(id);
+        ModelAndView modelAndView = new ModelAndView("product/form");
+        modelAndView.addObject("product", product);
+        return modelAndView;
+    }
+
+    @PostMapping("/{id}")
+    public String updateProduct(@PathVariable Long id, @ModelAttribute Product product) {
+        product.setId(id);
+        productService.saveProduct(product);
+        return "redirect:/products";
+    }
 
     @GetMapping("/delete/{id}")
     public ModelAndView deleteProduct(@PathVariable Long id) {

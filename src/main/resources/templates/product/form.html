@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>LooksTrends - Formulário de Produto</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+        background-color: #F0F4F8;
+        color: #333333;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .form-container {
+        margin-top: 2rem;
+        padding: 2rem;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #4A90E2, #FF69B4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+        transform: scale(1.05);
+    }
+    .btn-primary {
+        background-color: #007BFF;
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .btn-secondary {
+        background-color: #6C757D;
+        border: none;
+    }
+    .btn-secondary:hover {
+        background-color: #5A6268;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Incluir o fragmento do header -->
+<header th:insert="~{fragments/header :: header}"></header>
+
+<main class="container form-container mb-4">
+  <h2 class="mb-4">Formulário - Produto</h2>
+
+  <form th:action="@{${product.id} != null ? '/products/' + ${product.id} : '/products'}" th:object="${product}" method="post" enctype="multipart/form-data" class="row g-3">
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" th:field="*{nome}" class="form-control" id="nome" required>
+      <div th:if="${#fields.hasErrors('nome')}" class="text-danger" th:errors="*{nome}">Nome é obrigatório</div>
+    </div>
+    <div class="col-md-6">
+      <label for="categoria" class="form-label">Categoria</label>
+      <select th:field="*{categoria}" class="form-select" id="categoria" required>
+        <option value="" disabled>Selecione a categoria</option>
+        <option th:each="category : ${T(com.leadtech.lookbooks.model.enums.CategoryType).values()}"
+                th:value="${category}" th:text="${category}"></option>
+      </select>
+      <div th:if="${#fields.hasErrors('categoria')}" class="text-danger" th:errors="*{categoria}">Categoria é obrigatória</div>
+    </div>
+    <div class="col-md-6">
+      <label for="cor" class="form-label">Cor</label>
+      <input type="text" th:field="*{cor}" class="form-control" id="cor" required>
+      <div th:if="${#fields.hasErrors('cor')}" class="text-danger" th:errors="*{cor}">Cor é obrigatória</div>
+    </div>
+    <div class="col-md-6">
+      <label for="tamanho" class="form-label">Tamanho</label>
+      <select th:field="*{tamanho}" class="form-select" id="tamanho" required>
+        <option value="" disabled>Selecione o tamanho</option>
+        <option th:each="size : ${T(com.leadtech.lookbooks.model.enums.SizeType).values()}"
+                th:value="${size}" th:text="${size}"></option>
+      </select>
+      <div th:if="${#fields.hasErrors('tamanho')}" class="text-danger" th:errors="*{tamanho}">Tamanho é obrigatório</div>
+    </div>
+    <div class="col-md-6">
+      <label for="imagemURL" class="form-label">URL da Imagem</label>
+      <input type="url" th:field="*{imagemURL}" class="form-control" id="imagemURL">
+    </div>
+    <div class="col-md-6">
+      <label for="material" class="form-label">Material</label>
+      <input type="text" th:field="*{material}" class="form-control" id="material" required>
+      <div th:if="${#fields.hasErrors('material')}" class="text-danger" th:errors="*{material}">Material é obrigatório</div>
+    </div>
+    <div class="col-md-6">
+      <label for="marca" class="form-label">Marca</label>
+      <input type="text" th:field="*{marca}" class="form-control" id="marca" required>
+      <div th:if="${#fields.hasErrors('marca')}" class="text-danger" th:errors="*{marca}">Marca é obrigatória</div>
+    </div>
+    <div class="col-md-6">
+      <label for="preco" class="form-label">Preço</label>
+      <input type="number" th:field="*{preco}" class="form-control" id="preco" required>
+      <div th:if="${#fields.hasErrors('preco')}" class="text-danger" th:errors="*{preco}">Preço é obrigatório e deve ser positivo</div>
+    </div>
+    <div class="col-md-6">
+      <label for="design" class="form-label">Design</label>
+      <select th:field="*{design}" class="form-select" id="design" required>
+        <option value="" disabled>Selecione o design</option>
+        <option th:each="design : ${T(com.leadtech.lookbooks.model.enums.DesignType).values()}"
+                th:value="${design}" th:text="${design}"></option>
+      </select>
+      <div th:if="${#fields.hasErrors('design')}" class="text-danger" th:errors="*{design}">Design é obrigatório</div>
+    </div>
+    <div class="col-md-6">
+      <label for="sazonalidade" class="form-label">Sazonalidade</label>
+      <select th:field="*{sazonalidade}" class="form-select" id="sazonalidade" required>
+        <option value="" disabled>Selecione a sazonalidade</option>
+        <option th:each="season : ${T(com.leadtech.lookbooks.model.enums.SeasonalityType).values()}"
+                th:value="${season}" th:text="${season}"></option>
+      </select>
+      <div th:if="${#fields.hasErrors('sazonalidade')}" class="text-danger" th:errors="*{sazonalidade}">Sazonalidade é obrigatória</div>
+    </div>
+    <div class="col-12 mt-3">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a th:href="@{/products}" class="btn btn-secondary">Cancelar</a>
+    </div>
+  </form>
+</main>
+
+<!-- Incluir o fragmento do footer -->
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
