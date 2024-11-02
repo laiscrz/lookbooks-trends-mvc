@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>LooksTrends - Lista de Produtos</title>
@@ -85,6 +85,12 @@
 
 <main class="container mt-5">
   <h2 class="text-center mb-4 gradient-text">Lista de Produtos</h2>
+
+  <!-- Exibe mensagem de sucesso -->
+  <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+
+  <!-- Exibe mensagem de erro -->
+  <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
 
   <div class="mb-3">
     <a th:href="@{/products/new}" class="btn btn-success"><i class="fas fa-plus-circle"></i> Adicionar Novo Produto</a>
