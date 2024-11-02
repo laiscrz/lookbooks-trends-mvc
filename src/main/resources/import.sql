@@ -1,8 +1,8 @@
 -- Insira os produtos
-INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade) VALUES ('Camiseta Básica', 'CAMISETA', 'Branco', 'M', 'https://abrir.link/LtUfW', 'Algodão', 'H&M', 49.90, 'LISO', 'VERAO');
-INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade) VALUES ('Calça Jeans Skinny', 'CALCA', 'Azul', 'M', 'https://abrir.link/IEjTC', 'Denim', 'Levis', 89.90, 'LISO', 'VERAO');
-INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade) VALUES ('Casaco de Lã', 'CASACO', 'Bege', 'M', 'https://abrir.link/aQZTg', 'Lã', 'Puma', 199.90, 'LISO', 'INVERNO');
-INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade) VALUES ('Calça de Moletom', 'CALCA', 'Cinza', 'M', 'https://abrir.link/vZdgW', 'Algodão', 'Marca G', 79.90, 'LISO', 'INVERNO');
+INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade, data_cadastro) VALUES ('Camiseta Básica', 'CAMISETA', 'Preto', 'M', 'https://abrir.link/LtUfW', 'Algodão', 'H&M', 49.90, 'LISO', 'VERAO', '2024-01-15');
+INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade, data_cadastro) VALUES ('Calça Jeans Skinny', 'CALCA', 'Azul', 'M', 'https://abrir.link/IEjTC', 'Denim', 'Levis', 89.90, 'LISO', 'VERAO', '2024-02-20');
+INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade, data_cadastro) VALUES ('Casaco de Lã', 'CASACO', 'Bege', 'M', 'https://abrir.link/tSwCQ', 'Lã', 'Shein', 199.90, 'LISO', 'INVERNO', '2024-03-10');
+INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade, data_cadastro) VALUES ('Calça de Moletom', 'CALCA', 'Cinza', 'M', 'https://abrir.link/rMAON', 'Algodão', 'Puma', 79.90, 'LISO', 'INVERNO', '2024-04-05');
 
 -- Insira os lookbooks
 INSERT INTO lookbook (nome, estilo, tendencia) VALUES ('Lookbook Casual Verão', 'CASUAL', 'STREETWEAR');

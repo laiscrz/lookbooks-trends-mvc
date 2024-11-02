@@ -58,7 +58,7 @@ public class Product {
 
     @CreationTimestamp
     @Column(name = "data_cadastro", updatable = false)
-    private LocalDate dataCadrasto;
+    private LocalDate dataCadastro;
 
     @NotNull(message = "Sazonalidade é obrigatória")
     @Enumerated(EnumType.STRING)
