@@ -82,6 +82,9 @@
 <main class="container mt-5">
   <h2 class="text-center mb-4 gradient-text">Lista de Lookbooks</h2>
 
+  <!-- Exibe mensagem de sucesso -->
+  <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+
   <div class="mb-3">
     <a th:href="@{/lookbooks/new}" class="btn btn-success"><i class="fas fa-plus-circle"></i> Adicionar Novo Lookbook</a>
   </div>
