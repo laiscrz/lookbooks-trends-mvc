@@ -5,8 +5,8 @@ INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca,
 INSERT INTO product (nome, categoria, cor, tamanho, imagem_url, material, marca, preco, design, sazonalidade, data_cadastro) VALUES ('Calça de Moletom', 'CALCA', 'Cinza', 'M', 'https://abrir.link/rMAON', 'Algodão', 'Puma', 79.90, 'LISO', 'INVERNO', '2024-04-05');
 
 -- Insira os lookbooks
-INSERT INTO lookbook (nome, estilo, tendencia, data_criacao) VALUES ('Lookbook Casual Verão', 'CASUAL', 'STREETWEAR', '2024-11-01');
-INSERT INTO lookbook (nome, estilo, tendencia, data_criacao) VALUES ('Lookbook Elegante Inverno', 'ELEGANTE', 'VINTAGE', '2024-11-02');
+INSERT INTO lookbook (nome, estilo, tendencia, data_criacao) VALUES ('Look Casual Verão', 'CASUAL', 'STREETWEAR', '2024-11-01');
+INSERT INTO lookbook (nome, estilo, tendencia, data_criacao) VALUES ('Look Elegante Inverno', 'ELEGANTE', 'VINTAGE', '2024-11-02');
 
 -- Insira os relacionamentos
 INSERT INTO lookbook_product (lookbook_id, product_id) VALUES (1, 1); -- Lookbook Casual Verão com Camiseta Básica
