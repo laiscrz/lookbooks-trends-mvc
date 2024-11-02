@@ -11,6 +11,7 @@ public enum CategoryType {
     SUETER("Suéter"),
     CAMISA("Camisa"),
     JAQUETA_CASACO("Jaqueta Casaco"),
+    CASACO("Casaco"),
     CONJUNTO("Conjunto");
 
     private final String descricao;
