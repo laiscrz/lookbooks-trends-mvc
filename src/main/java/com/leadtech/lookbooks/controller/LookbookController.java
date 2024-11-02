@@ -5,12 +5,10 @@ import com.leadtech.lookbooks.model.enums.StyleType;
 import com.leadtech.lookbooks.model.enums.TrendType;
 import com.leadtech.lookbooks.service.LookbookService;
 import com.leadtech.lookbooks.service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -40,6 +38,37 @@ public class LookbookController {
         modelAndView.addObject("lookbook", lookbook);
         return modelAndView;
     }
+
+    @GetMapping("/new")
+    public ModelAndView showCreateLookbookForm() {
+        ModelAndView modelAndView = new ModelAndView("lookbook/form");
+        modelAndView.addObject("lookbook", new Lookbook());
+        modelAndView.addObject("products", productService.findAllProducts());
+        return modelAndView;
+    }
+
+    @PostMapping
+    public String saveLookbook(@Valid @ModelAttribute Lookbook lookbook) {
+        lookbookService.saveLookbook(lookbook);
+        return "redirect:/lookbooks";
+    }
+
+    @GetMapping("/edit/{id}")
+    public ModelAndView showEditLookbookForm(@PathVariable Long id) {
+        Lookbook lookbook = lookbookService.findByIdLookbook(id);
+        ModelAndView modelAndView = new ModelAndView("lookbook/form");
+        modelAndView.addObject("lookbook", lookbook);
+        modelAndView.addObject("products", productService.findAllProducts());
+        return modelAndView;
+    }
+
+    @PostMapping("/{id}")
+    public String updateLookbook(@PathVariable Long id, @ModelAttribute Lookbook lookbook) {
+        lookbook.setId(id);
+        lookbookService.saveLookbook(lookbook);
+        return "redirect:/lookbooks";
+    }
+
 
     @GetMapping("/delete/{id}")
     public ModelAndView deleteLookbook(@PathVariable Long id) {

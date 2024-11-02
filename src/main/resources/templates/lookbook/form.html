@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>LooksTrends - Formulário de Lookbook</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+        background-color: #F0F4F8;
+        color: #333333;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .form-container {
+        margin-top: 2rem;
+        padding: 2rem;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #4A90E2, #FF69B4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+        transform: scale(1.05);
+    }
+    .btn-primary {
+        background-color: #007BFF;
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .btn-secondary {
+        background-color: #6C757D;
+        border: none;
+    }
+    .btn-secondary:hover {
+        background-color: #5A6268;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Incluir o fragmento do header -->
+<header th:insert="~{fragments/header :: header}"></header>
+
+<main class="container form-container mb-4">
+  <h2 class="mb-4">Formulário - Lookbook</h2>
+
+  <form th:action="@{${lookbook.id} != null ? '/lookbooks/' + ${lookbook.id} : '/lookbooks'}" th:object="${lookbook}" method="post" class="row g-3">
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome do Lookbook</label>
+      <input type="text" th:field="*{nome}" class="form-control" id="nome" required>
+      <div th:if="${#fields.hasErrors('nome')}" class="text-danger" th:errors="*{nome}">Nome do lookbook é obrigatório</div>
+    </div>
+    <div class="col-md-12">
+      <label>Produtos</label>
+      <div>
+        <th:block th:each="product : ${products}">
+          <div class="form-check">
+            <input type="checkbox" th:field="*{products}" th:value="${product.id}" class="form-check-input" id="product-${product.id}">
+            <label class="form-check-label" th:for="'product-' + ${product.id}">[[${product.nome}]]</label>
+          </div>
+        </th:block>
+      </div>
+      <div th:if="${#fields.hasErrors('products')}" class="text-danger" th:errors="*{products}">É necessário selecionar pelo menos um produto</div>
+    </div>
+    <div class="col-md-6">
+      <label for="estilo" class="form-label">Estilo</label>
+      <select th:field="*{estilo}" class="form-select" id="estilo" required>
+        <option value="" disabled>Selecione o estilo</option>
+        <option th:each="style : ${estilo}" th:value="${style}" th:text="${style}"></option>
+      </select>
+      <div th:if="${#fields.hasErrors('estilo')}" class="text-danger" th:errors="*{estilo}">Estilo é obrigatório</div>
+    </div>
+    <div class="col-md-6">
+      <label for="tendencia" class="form-label">Tendência</label>
+      <select th:field="*{tendencia}" class="form-select" id="tendencia" required>
+        <option value="" disabled>Selecione a tendência</option>
+        <option th:each="trend : ${tendencia}" th:value="${trend}" th:text="${trend}"></option>
+      </select>
+      <div th:if="${#fields.hasErrors('tendencia')}" class="text-danger" th:errors="*{tendencia}">Tendência é obrigatória</div>
+    </div>
+    <div class="col-12 mt-3">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a th:href="@{/lookbooks}" class="btn btn-secondary">Cancelar</a>
+    </div>
+  </form>
+</main>
+
+<!-- Incluir o fragmento do footer -->
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
