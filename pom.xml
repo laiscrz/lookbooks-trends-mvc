@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.leadtech.lookbook</groupId>
-	<artifactId>LooksTrend</artifactId>
+	<artifactId>LooksTrends</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LooksTrend</name>
+	<name>LooksTrends</name>
 	<description>Aplicação onde os usuários podem criar e gerenciar seus próprios looks.</description>
 	<url/>
 	<licenses>
