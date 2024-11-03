@@ -240,7 +240,7 @@ Aqui está uma captura de tela da aplicação **LookbooksTrends** rodando na nuv
 ## 📄 Documentação Adicional
 
 - **Código Fonte**: [GitHub Repository](https://github.com/laiscrz/lookbooks-trends-mvc) 📁
-- **Vídeo de Demonstração**: [YouTube Video]() 📹
+- **Vídeo de Demonstração**: [YouTube Video](https://www.youtube.com/watch?v=MtmQNMGuqPA) 📹
 
 ---
 
