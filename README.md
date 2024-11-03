@@ -243,23 +243,18 @@ Aqui estão os membros do grupo que participaram durante desenvolvimento desta S
 
 * **RM 552258 - Laís Alves da Silva Cruz**
   - Turma: 2TDSPH
-  - Responsável: Banco de Dados e DevOps
 
 * **RM 552267 - Bianca Leticia Román Caldeira**
   - Turma: 2TDSPH
-  - Responsável: Mobile
 
 * **RM 552252 – Charlene Aparecida Estevam Mendes Fialho**
   - Turma: 2TDSPH
-  - Responsável: Java e .NET
 
 * **RM 97916 – Fabricio Torres Antonio**
   - Turma: 2TDSPH
-  - Responsável: QA
 
 * **RM 99675 – Lucca Raphael Pereira dos Santos**
   - Turma: 2TDSPZ
-  - Responsável: IA
     
 <table>
   <tr>
