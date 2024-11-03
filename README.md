@@ -84,7 +84,7 @@ Imagem URL: https://abrir.link/yLVET
 Para criar um novo Lookbook, você pode usar o seguinte formulário:
 
 ```plaintext
-Nome: Look Estiloso - Jordan
+Nome: Look Estiloso
 (Selecione os Produtos: Camiseta Jordan)
 Estilo: ESPORTIVO
 Tendência: UNISSEX
@@ -124,10 +124,10 @@ Imagem URL: https://abrir.link/yLVET
 Para atualizar um Lookbook existente, você pode usar o seguinte formulário:
 
 ```plaintext
-Nome: Look Esportivo - Air Jordan
+Nome: Look Esportivo - Jordan
 (Selecione os Produtos: Camiseta Jordan e Calça Jeans Skinny)
 Estilo: ESPORTIVO
-Tendência: UNISSEX
+Tendência: FEMININO
 ```
 
 ### 4. Excluir 🗑️
@@ -213,6 +213,13 @@ steps:
 5. **Teste do Deploy Manual** 🧪
    - Realize um teste inicial do pipeline de release criando uma nova release manualmente.
    - Verifique se a aplicação é implantada corretamente e se todos os serviços estão funcionando como esperado.
+
+---
+## 🌐 Imagem da Aplicação Rodando na Nuvem
+
+Aqui está uma captura de tela da aplicação **LookbooksTrends** rodando na nuvem:
+
+![LookbooksTrends Rodando na Nuvem](https://github.com/user-attachments/assets/0f385d43-8561-46d3-a455-a28a6980ecf9)
 
 ---
 
