@@ -2,10 +2,10 @@
 
 **Lookbooks Trends** é uma aplicação inovadora que permite aos usuários explorar e gerenciar looks de moda, tudo enquanto segue as últimas tendências do mercado! 🌟
 
-## 🚀 Funcionalidades
+## ⚙️ Funcionalidades
 
 - **Exploração de Looks**: Navegue por uma coleção diversificada de looks inspiradores. 👗👖
-- **Recomendações Personalizadas**: Receba sugestões de looks com base nas suas preferências. 🎉
+- **Gerenciamento de Produtos e Looks**: Adicione, edite e remova produtos e looks com facilidade. Organize suas criações em lookbooks personalizados e aproveite recomendações com base em suas preferências e tendências atuais.  🎉
 - **Experiência de Usuário Intuitiva**: Navegação fácil e design responsivo para todos os dispositivos. 📱💻
 
 ---
@@ -215,11 +215,26 @@ steps:
    - Verifique se a aplicação é implantada corretamente e se todos os serviços estão funcionando como esperado.
 
 ---
+
+## Tecnologias Utilizadas 🛠️
+
+- **Spring Boot**: Framework para desenvolvimento de aplicações Java.
+- **Thymeleaf**: Motor de templates para gerar páginas HTML dinâmicas.
+- **Hibernate**: ORM para mapeamento objeto-relacional.
+- **Oracle Database**: Banco de dados relacional utilizado para armazenar informações de lookbooks e produtos.
+- **JUnit**: Framework para testes unitários em Java.
+- **Maven**: Ferramenta de gerenciamento de dependências e build do projeto.
+- **Azure CLI**: Utilizada para criar e gerenciar Web App Service.
+- **Azure DevOps**: Para configuração de pipelines de CI/CD.
+
 ---
 
-## 🛠 Tecnologias Utilizadas
 
-- **Java**: A linguagem de programação principal da aplicação. ☕
-- **Spring Boot**: Para construção de APIs e gerenciamento de dependências. 🚀
-- **Thymeleaf**: Para renderização de templates no lado do servidor. 📜
-- **Oracle SQL**: Banco de dados relacional para armazenamento e gerenciamento eficiente de dados. 🗄️
+## 📄 Documentação Adicional
+
+- **Código Fonte**: [GitHub Repository](https://github.com/laiscrz/lookbooks-trends-mvc) 📁
+- **Vídeo de Demonstração**: [YouTube Video]() 📹
+
+---
+
+> Esse guia detalha o processo de configuração do CI/CD, desde a criação do projeto no Azure até a configuração do pipeline de build e release, facilitando a automação do deploy e a entrega contínua da aplicação **LookbooksTrends**. ✨🚀
