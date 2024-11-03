@@ -85,7 +85,7 @@ Para criar um novo Lookbook, você pode usar o seguinte formulário:
 
 ```plaintext
 Nome: Look Estiloso - Jordan
-(Selecione os Produtos: Camiseta Jordan e Calça Jeans Skinny)
+(Selecione os Produtos: Camiseta Jordan)
 Estilo: ESPORTIVO
 Tendência: UNISSEX
 ```
@@ -125,7 +125,7 @@ Para atualizar um Lookbook existente, você pode usar o seguinte formulário:
 
 ```plaintext
 Nome: Look Esportivo - Air Jordan
-(Selecione os Produtos: Camiseta Jordan)
+(Selecione os Produtos: Camiseta Jordan e Calça Jeans Skinny)
 Estilo: ESPORTIVO
 Tendência: UNISSEX
 ```
