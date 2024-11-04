@@ -50,7 +50,7 @@ erDiagram
 
 ## 🧪 Testes Unitários
 
-A aplicação **VisitMap** inclui uma suíte de testes unitários que garante a qualidade e o funcionamento adequado dos serviços. Foram implementados testes para as classes, `Product`, `Lookbook`, `ProductService` e `LookbookService` utilizando **JUnit** e **Mockito**. 
+A aplicação **LookbooksTrends** inclui uma suíte de testes unitários que garante a qualidade e o funcionamento adequado dos serviços. Foram implementados testes para as classes, `Product`, `Lookbook`, `ProductService` e `LookbookService` utilizando **JUnit** e **Mockito**. 
 
 No total, 22 testes foram executados com sucesso, confirmando que as funcionalidades principais estão funcionando conforme o esperado.
 
@@ -144,7 +144,7 @@ Para excluir um Lookbook, aperte em 'Excluir'.
 
 ## 🚀 Deploy e Integração Contínua - Azure Pipelines
 
-O **VisitMap** utiliza uma abordagem automatizada para implantação e entrega contínua, aproveitando os recursos do **Azure Web App**. O pipeline de CI/CD é configurado para garantir que o processo de build, teste e deploy seja contínuo e integrado ao fluxo de desenvolvimento. 🌐🔧
+O **LookbooksTrends** utiliza uma abordagem automatizada para implantação e entrega contínua, aproveitando os recursos do **Azure Web App**. O pipeline de CI/CD é configurado para garantir que o processo de build, teste e deploy seja contínuo e integrado ao fluxo de desenvolvimento. 🌐🔧
 
 ### Passo a Passo para Configuração do CI/CD
 
